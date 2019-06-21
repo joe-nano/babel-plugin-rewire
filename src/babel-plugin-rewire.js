@@ -32,7 +32,9 @@ module.exports = function({ types: t, template }) {
 		!(parent.type === 'ImportSpecifier') &&
 		!(parent.type === 'ObjectTypeProperty') &&
 		!(parent.type === 'ClassMethod') &&
-		!(parent.type === 'TSTypeReference') &&
+		!(parent.type === 'TSDeclareFunction') &&
+		!(parent.type === 'TSExpressionWithTypeArguments') &&
+        !(parent.type === 'TSTypeReference') &&
 		!(parent.type === 'TSTypeQuery') &&
 		!(parent.type === 'TSQualifiedName')
 	}
